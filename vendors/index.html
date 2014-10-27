@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="fr" ng-app="myApp">
+    <head>
+        <meta charset="UTF-8">
+        <title>Les contrôleurs</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+<body>
+ 
+    <!-- Un premier contrôleurs -->
+    <div ng-controller="MainCtrl">
+        <h2>{{title}}</h2>
+        <ul>
+            <li ng-repeat="user in users">
+                <div>Nom: {{user.name}}</div>
+                <div>Age: {{user.age}}</div>
+            </li>
+        </ul>
+    </div>
+ 
+    <!-- Un second contrôleurs -->
+    <div ng-controller="SecondCtrl">
+        <h2>{{title}}</h2>
+        <button ng-click="ohHey()">Click</button>
+    </div>
+
+    <!-- directives -->
+    <div ng-controller="AvatarCtrl">
+        <h1>Exemple de directive</h1>
+        <!-- Ceci est une directive de type "Element" -->
+        <avatar></avatar>
+    </div>
+
+    <!-- Service -->
+    <div ng-controller="UserCtrl">
+        <p>{{userData.firstName}}</p>
+        <p>{{userData.userName}}</p>
+        <p>{{userData.age}}</p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/controllers/MainCtrl.js"></script>
+    <script src="../js/controllers/SecondCtrl.js"></script>
+    <script src="../js/controllers/AvatarCtrl.js"></script>
+    <script src="../js/controllers/UserCtrl.js"></script>
+    <script src="../js/directives/AvatarDirective.js"></script>
+    <script src="../js/services/userService.js"></script>
+</body>
+</html>

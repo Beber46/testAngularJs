@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Account</title>
+</head>
+<body>
+
+<!-- Un premier contrôleurs -->
+<div ng-controller="MainCtrl">
+    <h2>{{title}}</h2>
+    <ul>
+        <li ng-repeat="user in users">
+            <div>Nom: {{user.name}}</div>
+            <div>Age: {{user.age}}</div>
+        </li>
+    </ul>
+</div>
+
+<!-- Un second contrôleurs -->
+<div ng-controller="SecondCtrl">
+    <h2>{{title}}</h2>
+    <button ng-click="ohHey()">Click</button>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+<script src="../js/controllers/MainCtrl.js"></script>
+<script src="../js/controllers/SecondCtrl.js"></script>
+</body>
+</html>
